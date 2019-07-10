@@ -1,0 +1,24 @@
+public class NumberPalindrome {
+ public static boolean isPalindrome(int number)
+ {
+     boolean flag=false;
+     int sum=0;
+     int r=0;
+     number=Math.abs(number);
+     int temp_number=number;
+     while(number>0){
+         r=number%10;  //getting remainder
+         sum=(sum*10)+r;
+         number=number/10;
+    }
+    if(temp_number==sum)
+    {
+        flag=true;
+        
+    }
+    else{
+        flag=false;
+    }
+     return flag;
+ }
+}
