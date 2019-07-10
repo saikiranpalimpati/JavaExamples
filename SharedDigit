@@ -1,0 +1,32 @@
+public class SharedDigit {
+    // write your code here
+    public static boolean hasSharedDigit(int a, int b)
+    {
+        boolean flag=false;
+        if(a<10||b<10||a>99||b>99)
+        {
+            flag=false;
+        }
+        else{
+        while(a>0)
+        {
+            int r=a%10;
+            int tempb=b;
+            while(tempb>0)
+            {
+                int rb=tempb%10;
+                System.out.println(rb);
+                if(rb==r)
+                
+                {
+                    flag=true;
+                }
+                tempb=tempb/10;
+            }
+            a=a/10;
+        }
+        }
+    
+    return flag;
+    }
+}
